@@ -2,7 +2,52 @@ version: 2
 
 models:
   - name: stg_weather
-    description: " Staging model that transforms raw weather data from the bronze layer, preparing it to analysis in the silver layer."
+    description: "Cleaned daily weather data per city with latest records only"
     columns:
-      - name: day
-        tests: [not_null, unique]
+      - name: weather_surrogate_key
+        description: "Unique identifier for city+date combination"
+        tests:
+          - unique
+          - not_null
+      
+      - name: city_name
+        description: "Name of the Nepali city"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Kathmandu', 'Pokhara', 'Biratnagar', 'Birgunj']
+      
+      - name: latitude
+        description: "City latitude in decimal degrees"
+        tests:
+          - not_null
+      
+      - name: longitude
+        description: "City longitude in decimal degrees"
+        tests:
+          - not_null
+      
+      - name: observation_date
+        description: "Date of weather observation"
+        tests:
+          - not_null
+      
+      - name: temp_max_celsius
+        description: "Maximum temperature in Celsius"
+        tests:
+          - not_null
+      
+      - name: temp_min_celsius
+        description: "Minimum temperature in Celsius"
+        tests:
+          - not_null
+      
+      - name: precipitation_mm
+        description: "Total precipitation in millimeters"
+        tests:
+          - not_null
+
+      - name: ingested_at
+        description: "When this record was ingested into bronze layer"
+        tests:
+          - not_null

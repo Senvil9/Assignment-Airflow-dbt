@@ -4,6 +4,7 @@ CREATE schema IF NOT EXISTS gold;
 
 CREATE TABLE IF NOT EXISTS bronze.weather_raw (
     ingested_at TIMESTAMP NOT NULL,
+    city_name VARCHAR(50),
     latitude NUMERIC,
     longitude NUMERIC,
     day DATE NOT NULL,

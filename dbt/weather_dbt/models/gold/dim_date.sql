@@ -2,8 +2,8 @@
 
 with bounds as (
     SELECT
-        min(day) as min_day,
-        max(day) as max_day
+        min(observation_date) as min_day,
+        max(observation_date) as max_day
     FROM {{ ref('stg_weather') }}    
 ),
 dates as (
