@@ -18,4 +18,9 @@ SELECT
     TO_CHAR(date_day, 'Mon') AS month_name,
     EXTRACT(day FROM date_day) AS day_of_month,
     EXTRACT(dow FROM date_day):: INT AS day_of_week,
-    
+    TO_CHAR(date_day, 'Dy') AS day_name,
+    CASE
+        WHEN EXTRACT(dow FROM date_day) IN (0,6) THEN TRUE
+        ELSE FALSE
+    END AS is_weekend
+FROM dates
