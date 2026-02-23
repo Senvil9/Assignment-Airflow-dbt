@@ -595,3 +595,73 @@ ImportError: cannot import name 'PythonOperater' from 'airflow.operators.python'
 [2026-02-23T14:17:03.709+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:17:03.708+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-02-23T14:17:03.722+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:17:03.721+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
 [2026-02-23T14:17:03.738+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.112 seconds
+[2026-02-23T14:17:35.622+0000] {processor.py:186} INFO - Started process (PID=485) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:17:35.623+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:17:35.625+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:17:35.625+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:17:35.658+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:17:35.689+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:17:35.689+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:17:35.703+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:17:35.703+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:17:35.737+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.120 seconds
+[2026-02-23T14:18:07.030+0000] {processor.py:186} INFO - Started process (PID=490) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:18:07.031+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:18:07.034+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:18:07.033+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:18:07.065+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:18:07.099+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:18:07.098+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:18:07.111+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:18:07.111+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:18:07.143+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.123 seconds
+[2026-02-23T14:18:38.316+0000] {processor.py:186} INFO - Started process (PID=495) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:18:38.317+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:18:38.320+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:18:38.320+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:18:38.361+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:18:38.394+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:18:38.394+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:18:38.411+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:18:38.411+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:18:38.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.136 seconds
+[2026-02-23T14:19:09.323+0000] {processor.py:186} INFO - Started process (PID=500) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:19:09.325+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:19:09.328+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:19:09.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:19:09.365+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:19:09.406+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:19:09.405+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:19:09.419+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:19:09.419+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:19:09.456+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.144 seconds
+[2026-02-23T14:19:40.334+0000] {processor.py:186} INFO - Started process (PID=505) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:19:40.335+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:19:40.338+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:19:40.338+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:19:40.373+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:19:40.405+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:19:40.405+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:19:40.417+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:19:40.417+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:19:40.454+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.127 seconds
+[2026-02-23T14:20:10.714+0000] {processor.py:186} INFO - Started process (PID=510) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:20:10.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:20:10.719+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:20:10.719+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:20:10.754+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:20:10.786+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:20:10.785+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:20:10.801+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:20:10.801+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:20:10.817+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.110 seconds
+[2026-02-23T14:20:42.005+0000] {processor.py:186} INFO - Started process (PID=515) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:20:42.006+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:20:42.011+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:20:42.010+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:20:42.050+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:20:42.082+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:20:42.081+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:20:42.097+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:20:42.097+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:20:42.114+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.117 seconds
+[2026-02-23T14:21:13.024+0000] {processor.py:186} INFO - Started process (PID=520) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:21:13.025+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:21:13.028+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:21:13.028+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:21:13.062+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:21:13.097+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:21:13.097+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:21:13.111+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:21:13.111+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:21:13.127+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.110 seconds
+[2026-02-23T14:21:43.947+0000] {processor.py:186} INFO - Started process (PID=525) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:21:43.949+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:21:43.952+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:21:43.951+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:21:43.987+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:21:44.016+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:21:44.016+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:21:44.030+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:21:44.030+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:21:44.069+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.128 seconds
+[2026-02-23T14:22:14.315+0000] {processor.py:186} INFO - Started process (PID=530) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:22:14.316+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T14:22:14.319+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:22:14.319+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:22:14.354+0000] {processor.py:925} INFO - DAG(s) 'weather_dbt_pipeline' retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T14:22:14.387+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:22:14.386+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-23T14:22:14.400+0000] {logging_mixin.py:190} INFO - [2026-02-23T14:22:14.400+0000] {dag.py:4180} INFO - Setting next_dagrun for weather_dbt_pipeline to None, run_after=None
+[2026-02-23T14:22:14.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.113 seconds
