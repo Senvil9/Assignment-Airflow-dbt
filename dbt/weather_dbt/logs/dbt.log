@@ -1,0 +1,1518 @@
+[0m13:44:04.822308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f849fada310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84a1ee5190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f849fcb3e90>]}
+
+
+============================== 13:44:04.828950 | c71c2298-3b42-48dd-b563-739f7f391c94 ==============================
+[0m13:44:04.828950 [info ] [MainThread]: Running with dbt=1.10.7
+[0m13:44:04.829931 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'profiles_dir': '/opt/airflow/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:05.068108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c71c2298-3b42-48dd-b563-739f7f391c94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f849fb300d0>]}
+[0m13:44:05.109027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c71c2298-3b42-48dd-b563-739f7f391c94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84a2497f10>]}
+[0m13:44:05.110601 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:44:05.191683 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m13:44:05.194635 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:44:05.195863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c71c2298-3b42-48dd-b563-739f7f391c94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f849fb2ed90>]}
+[0m13:44:05.337237 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading weather_dbt: bronze/sources.yml - Runtime Error
+    Syntax error near line 8
+    ------------------------------
+    5  |     schema: bronze
+    6  |     tables:
+    7  |       - name: weather_raw
+    8  |           description: "Raw weather data ingested from the API, stored in the bronze layer."
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 8, column 22
+[0m13:44:05.338991 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.5836787, "process_in_blocks": "76536", "process_kernel_time": 0.585733, "process_mem_max_rss": "115192", "process_out_blocks": "1728", "process_user_time": 1.740222}
+[0m13:44:05.339722 [debug] [MainThread]: Command `dbt run` failed at 13:44:05.339610 after 0.58 seconds
+[0m13:44:05.340485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f849fad9510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f849fb2f9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84a3fe3690>]}
+[0m13:44:05.341307 [debug] [MainThread]: Flushing usage events
+[0m13:44:06.768792 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:45:35.785637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90f9d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90f91650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90f91910>]}
+
+
+============================== 13:45:35.791815 | 10b7909c-3cb8-4c60-a4aa-304a7ab3760d ==============================
+[0m13:45:35.791815 [info ] [MainThread]: Running with dbt=1.10.7
+[0m13:45:35.793060 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt', 'send_anonymous_usage_stats': 'True'}
+[0m13:45:35.925989 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10b7909c-3cb8-4c60-a4aa-304a7ab3760d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90323d10>]}
+[0m13:45:35.967694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '10b7909c-3cb8-4c60-a4aa-304a7ab3760d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a9395b9d0>]}
+[0m13:45:35.969876 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:45:36.061116 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m13:45:36.064148 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:45:36.065017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '10b7909c-3cb8-4c60-a4aa-304a7ab3760d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a8ff051d0>]}
+[0m13:45:36.171642 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading weather_dbt: bronze/sources.yml - Runtime Error
+    Syntax error near line 8
+    ------------------------------
+    5  |     schema: bronze
+    6  |     tables:
+    7  |       - name: weather_raw
+    8  |           description: "Raw weather data ingested from the API, stored in the bronze layer."
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 8, column 22
+[0m13:45:36.173427 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.4439371, "process_in_blocks": "0", "process_kernel_time": 0.438437, "process_mem_max_rss": "113388", "process_out_blocks": "0", "process_user_time": 1.540563}
+[0m13:45:36.174344 [debug] [MainThread]: Command `dbt run` failed at 13:45:36.174273 after 0.45 seconds
+[0m13:45:36.175076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90f9c410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90f9e910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x711a90ff2450>]}
+[0m13:45:36.175899 [debug] [MainThread]: Flushing usage events
+[0m13:45:37.668959 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:00:14.479759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e87def50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e863f510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e87fc9d0>]}
+
+
+============================== 14:00:14.485920 | ebb49d0f-47ef-472a-8fdf-0daf2ef27065 ==============================
+[0m14:00:14.485920 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:00:14.486860 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:00:14.630072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ebb49d0f-47ef-472a-8fdf-0daf2ef27065', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e8675390>]}
+[0m14:00:14.662345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ebb49d0f-47ef-472a-8fdf-0daf2ef27065', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7eb1cc410>]}
+[0m14:00:14.664149 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:00:14.735629 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:00:14.737981 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:00:14.738763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ebb49d0f-47ef-472a-8fdf-0daf2ef27065', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e7b3e090>]}
+[0m14:00:14.828834 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading weather_dbt: bronze/sources.yml - Runtime Error
+    Syntax error near line 8
+    ------------------------------
+    5  |     schema: bronze
+    6  |     tables:
+    7  |       - name: weather_raw
+    8  |           description: "Raw weather data ingested from the API, stored in the bronze layer."
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 8, column 22
+[0m14:00:14.830460 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.39397657, "process_in_blocks": "27464", "process_kernel_time": 0.495097, "process_mem_max_rss": "115804", "process_out_blocks": "1728", "process_user_time": 1.415189}
+[0m14:00:14.831171 [debug] [MainThread]: Command `dbt run` failed at 14:00:14.831095 after 0.39 seconds
+[0m14:00:14.831776 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e89bfe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e737b090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78e7e863fe10>]}
+[0m14:00:14.832362 [debug] [MainThread]: Flushing usage events
+[0m14:00:16.124870 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:03:06.367402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc071fd9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc0722cd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc0724f2d0>]}
+
+
+============================== 14:03:06.372996 | 34a98a5b-4686-4a10-b0a6-95beacf2895c ==============================
+[0m14:03:06.372996 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:03:06.374136 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'profiles_dir': '/opt/airflow/dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt', 'send_anonymous_usage_stats': 'True'}
+[0m14:03:06.512846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '34a98a5b-4686-4a10-b0a6-95beacf2895c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc0653c590>]}
+[0m14:03:06.557883 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '34a98a5b-4686-4a10-b0a6-95beacf2895c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc09bc0610>]}
+[0m14:03:06.559579 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:03:06.646920 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:03:06.649901 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:03:06.650736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '34a98a5b-4686-4a10-b0a6-95beacf2895c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc0613b610>]}
+[0m14:03:06.762238 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading weather_dbt: bronze/sources.yml - Runtime Error
+    Syntax error near line 8
+    ------------------------------
+    5  |     schema: bronze
+    6  |     tables:
+    7  |       - name: weather_raw
+    8  |           description: "Raw weather data ingested from the API, stored in the bronze layer."
+    
+    Raw Error:
+    ------------------------------
+    mapping values are not allowed in this context
+      in "<unicode string>", line 8, column 22
+[0m14:03:06.763999 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.45801002, "process_in_blocks": "0", "process_kernel_time": 0.404411, "process_mem_max_rss": "113420", "process_out_blocks": "0", "process_user_time": 1.442539}
+[0m14:03:06.764997 [debug] [MainThread]: Command `dbt run` failed at 14:03:06.764925 after 0.46 seconds
+[0m14:03:06.766032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc07073f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc071fe610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76bc070b7350>]}
+[0m14:03:06.766787 [debug] [MainThread]: Flushing usage events
+[0m14:03:08.545798 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:05:30.476958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb5524590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb57d0650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb59cd610>]}
+
+
+============================== 14:05:30.482406 | 35b1d7d1-e621-4762-a86f-a95a74f4de1a ==============================
+[0m14:05:30.482406 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:05:30.483690 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dbt', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:05:30.597596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb4f53f90>]}
+[0m14:05:30.635820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb7f0fd90>]}
+[0m14:05:30.637309 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:05:30.712230 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:05:30.715494 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:05:30.716802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb5470150>]}
+[0m14:05:31.600853 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb3786b10>]}
+[0m14:05:31.665816 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:05:31.671347 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:05:31.718957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb33b2e50>]}
+[0m14:05:31.719850 [info ] [MainThread]: Found 4 models, 2 data tests, 1 source, 435 macros
+[0m14:05:31.720670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb3f8fed0>]}
+[0m14:05:31.722370 [info ] [MainThread]: 
+[0m14:05:31.723263 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:05:31.723933 [info ] [MainThread]: 
+[0m14:05:31.724934 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:05:31.728941 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m14:05:31.763240 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:05:31.764445 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:05:31.765478 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:05:31.780418 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.015 seconds
+[0m14:05:31.782300 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:05:31.784696 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:05:31.786062 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:05:31.786989 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:05:31.794771 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.008 seconds
+[0m14:05:31.796689 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:05:31.798857 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_gold)
+[0m14:05:31.802983 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:05:31.803761 [debug] [ThreadPool]: On list_analytics_gold: BEGIN
+[0m14:05:31.804533 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:05:31.811294 [debug] [ThreadPool]: SQL status: BEGIN in 0.007 seconds
+[0m14:05:31.812495 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:05:31.813238 [debug] [ThreadPool]: On list_analytics_gold: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_gold"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m14:05:31.823458 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.009 seconds
+[0m14:05:31.825537 [debug] [ThreadPool]: On list_analytics_gold: ROLLBACK
+[0m14:05:31.826730 [debug] [ThreadPool]: On list_analytics_gold: Close
+[0m14:05:31.827827 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_gold, now list_analytics_silver)
+[0m14:05:31.830133 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:05:31.830801 [debug] [ThreadPool]: On list_analytics_silver: BEGIN
+[0m14:05:31.831445 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:05:31.837670 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m14:05:31.838786 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:05:31.839593 [debug] [ThreadPool]: On list_analytics_silver: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_silver"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m14:05:31.842302 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.002 seconds
+[0m14:05:31.843591 [debug] [ThreadPool]: On list_analytics_silver: ROLLBACK
+[0m14:05:31.844403 [debug] [ThreadPool]: On list_analytics_silver: Close
+[0m14:05:31.848722 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:31.849848 [debug] [MainThread]: On master: BEGIN
+[0m14:05:31.850595 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:05:31.858077 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m14:05:31.859307 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:31.860024 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:05:31.866929 [debug] [MainThread]: SQL status: SELECT 0 in 0.006 seconds
+[0m14:05:31.868530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb0f09dd0>]}
+[0m14:05:31.869434 [debug] [MainThread]: On master: ROLLBACK
+[0m14:05:31.870676 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:31.871647 [debug] [MainThread]: On master: BEGIN
+[0m14:05:31.873007 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:05:31.873743 [debug] [MainThread]: On master: COMMIT
+[0m14:05:31.874511 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:31.875398 [debug] [MainThread]: On master: COMMIT
+[0m14:05:31.876469 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:05:31.877357 [debug] [MainThread]: On master: Close
+[0m14:05:31.882687 [debug] [Thread-1 (]: Began running node model.weather_dbt.stg_weather
+[0m14:05:31.883898 [info ] [Thread-1 (]: 1 of 4 START sql view model silver.stg_weather ................................. [RUN]
+[0m14:05:31.884903 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_silver, now model.weather_dbt.stg_weather)
+[0m14:05:31.885991 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.stg_weather
+[0m14:05:31.890814 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.stg_weather"
+[0m14:05:31.906019 [debug] [Thread-1 (]: Began executing node model.weather_dbt.stg_weather
+[0m14:05:31.925902 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.stg_weather"
+[0m14:05:31.941547 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:05:31.942400 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: BEGIN
+[0m14:05:31.943305 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:31.950557 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m14:05:31.951688 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:05:31.952585 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+
+  create view "analytics"."silver"."stg_weather__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH ranked AS (
+    SELECT
+        day:: DATE AS day,
+        latitude:: NUMERIC AS latitude,
+        longitude:: NUMERIC AS longitude,
+        temp_max:: NUMERIC AS temp_max,
+        temp_min:: NUMERIC AS temp_min,
+        precipitation_sum:: NUMERIC AS precipitation_sum,
+        ingested_at:: TIMESTAMP AS ingested_at,
+        ROW_NUMBER() OVER(PARTITION BY day ORDER BY ingested_at DESC) AS rn
+    FROM "analytics"."bronze"."weather_raw"
+)
+
+SELECT
+    day,
+    latitude,
+    longitude,
+    temp_max,
+    temp_min,
+    precipitation_sum,
+    ingested_at
+FROM ranked
+WHERE rn = 1
+  );
+[0m14:05:31.960523 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.007 seconds
+[0m14:05:31.964747 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:05:31.965778 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+alter table "analytics"."silver"."stg_weather__dbt_tmp" rename to "stg_weather"
+[0m14:05:31.967312 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:05:31.976337 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: COMMIT
+[0m14:05:31.977497 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:05:31.978219 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: COMMIT
+[0m14:05:31.979733 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:05:31.984014 [debug] [Thread-1 (]: Applying DROP to: "analytics"."silver"."stg_weather__dbt_backup"
+[0m14:05:31.987825 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:05:31.988743 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+drop view if exists "analytics"."silver"."stg_weather__dbt_backup" cascade
+[0m14:05:31.990017 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m14:05:31.992486 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: Close
+[0m14:05:31.994722 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb04985d0>]}
+[0m14:05:31.996338 [info ] [Thread-1 (]: 1 of 4 OK created sql view model silver.stg_weather ............................ [[32mCREATE VIEW[0m in 0.11s]
+[0m14:05:31.997477 [debug] [Thread-1 (]: Finished running node model.weather_dbt.stg_weather
+[0m14:05:31.999014 [debug] [Thread-1 (]: Began running node model.weather_dbt.dim_date
+[0m14:05:31.999801 [info ] [Thread-1 (]: 2 of 4 START sql table model gold.dim_date ..................................... [RUN]
+[0m14:05:32.000665 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.stg_weather, now model.weather_dbt.dim_date)
+[0m14:05:32.001396 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.dim_date
+[0m14:05:32.010195 [debug] [Thread-1 (]: Compilation Error in model dim_date (models/gold/dim_date.sql)
+  'congif' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:05:32.011429 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb0369c90>]}
+[0m14:05:32.012607 [error] [Thread-1 (]: 2 of 4 ERROR creating sql table model gold.dim_date ............................ [[31mERROR[0m in 0.01s]
+[0m14:05:32.013684 [debug] [Thread-1 (]: Finished running node model.weather_dbt.dim_date
+[0m14:05:32.014328 [debug] [Thread-1 (]: Began running node model.weather_dbt.dim_location
+[0m14:05:32.014713 [debug] [Thread-4 (]: Marking all children of 'model.weather_dbt.dim_date' to be skipped because of status 'error'.  Reason: Compilation Error in model dim_date (models/gold/dim_date.sql)
+  'congif' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m14:05:32.015799 [info ] [Thread-1 (]: 3 of 4 START sql table model gold.dim_location ................................. [RUN]
+[0m14:05:32.017567 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.dim_date, now model.weather_dbt.dim_location)
+[0m14:05:32.018247 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.dim_location
+[0m14:05:32.020797 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.dim_location"
+[0m14:05:32.032235 [debug] [Thread-1 (]: Began executing node model.weather_dbt.dim_location
+[0m14:05:32.048292 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.dim_location"
+[0m14:05:32.059956 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:05:32.060865 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: BEGIN
+[0m14:05:32.061666 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:32.068725 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m14:05:32.069949 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:05:32.070718 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+
+  
+    
+
+  create  table "analytics"."gold"."dim_location__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT DISTINCT
+    latitude,
+    longitude
+FROM "analytics"."silver"."stg_weather"
+  );
+  
+[0m14:05:32.078729 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.007 seconds
+[0m14:05:32.083488 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:05:32.084291 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+alter table "analytics"."gold"."dim_location__dbt_tmp" rename to "dim_location"
+[0m14:05:32.085849 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:05:32.087089 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: COMMIT
+[0m14:05:32.088424 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:05:32.089843 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: COMMIT
+[0m14:05:32.091965 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:05:32.093938 [debug] [Thread-1 (]: Applying DROP to: "analytics"."gold"."dim_location__dbt_backup"
+[0m14:05:32.097054 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:05:32.097959 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+drop table if exists "analytics"."gold"."dim_location__dbt_backup" cascade
+[0m14:05:32.099095 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:05:32.100380 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: Close
+[0m14:05:32.101301 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb0345d90>]}
+[0m14:05:32.102582 [info ] [Thread-1 (]: 3 of 4 OK created sql table model gold.dim_location ............................ [[32mSELECT 1[0m in 0.08s]
+[0m14:05:32.103839 [debug] [Thread-1 (]: Finished running node model.weather_dbt.dim_location
+[0m14:05:32.104612 [debug] [Thread-1 (]: Began running node model.weather_dbt.fct_weather_daily
+[0m14:05:32.105519 [info ] [Thread-1 (]: 4 of 4 START sql table model gold.fct_weather_daily ............................ [RUN]
+[0m14:05:32.106496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.dim_location, now model.weather_dbt.fct_weather_daily)
+[0m14:05:32.107157 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.fct_weather_daily
+[0m14:05:32.109467 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.116520 [debug] [Thread-1 (]: Began executing node model.weather_dbt.fct_weather_daily
+[0m14:05:32.119576 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.127562 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.128485 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: BEGIN
+[0m14:05:32.129231 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:32.135912 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m14:05:32.137109 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.138059 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+
+  
+    
+
+  create  table "analytics"."gold"."fct_weather_daily__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    day AS date_day,
+    latitude,
+    longitude,
+    temp_max,
+    temp_min,
+    temp_max - temp_min AS temp_range,
+    precipitation_sum
+FROM "analytics"."silver"."stg_weather"
+  );
+  
+[0m14:05:32.143311 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.004 seconds
+[0m14:05:32.145943 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.146794 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+alter table "analytics"."gold"."fct_weather_daily__dbt_tmp" rename to "fct_weather_daily"
+[0m14:05:32.147942 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:05:32.149880 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: COMMIT
+[0m14:05:32.150575 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.151160 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: COMMIT
+[0m14:05:32.152669 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:05:32.154487 [debug] [Thread-1 (]: Applying DROP to: "analytics"."gold"."fct_weather_daily__dbt_backup"
+[0m14:05:32.155675 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:05:32.156475 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+drop table if exists "analytics"."gold"."fct_weather_daily__dbt_backup" cascade
+[0m14:05:32.157517 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:05:32.158713 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: Close
+[0m14:05:32.159560 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '35b1d7d1-e621-4762-a86f-a95a74f4de1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb0331190>]}
+[0m14:05:32.160551 [info ] [Thread-1 (]: 4 of 4 OK created sql table model gold.fct_weather_daily ....................... [[32mSELECT 14[0m in 0.05s]
+[0m14:05:32.161869 [debug] [Thread-1 (]: Finished running node model.weather_dbt.fct_weather_daily
+[0m14:05:32.163783 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:32.164760 [debug] [MainThread]: On master: BEGIN
+[0m14:05:32.165833 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:05:32.172359 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m14:05:32.173386 [debug] [MainThread]: On master: COMMIT
+[0m14:05:32.174214 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:32.174857 [debug] [MainThread]: On master: COMMIT
+[0m14:05:32.175833 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:05:32.176465 [debug] [MainThread]: On master: Close
+[0m14:05:32.177453 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:05:32.178213 [debug] [MainThread]: Connection 'model.weather_dbt.fct_weather_daily' was properly closed.
+[0m14:05:32.179159 [info ] [MainThread]: 
+[0m14:05:32.180106 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.45 seconds (0.45s).
+[0m14:05:32.181095 [debug] [MainThread]: Command end result
+[0m14:05:32.209884 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:05:32.216863 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:05:32.224844 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/weather_dbt/target/run_results.json
+[0m14:05:32.226341 [info ] [MainThread]: 
+[0m14:05:32.227958 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:05:32.229067 [info ] [MainThread]: 
+[0m14:05:32.230789 [error] [MainThread]: [31mFailure in model dim_date (models/gold/dim_date.sql)[0m
+[0m14:05:32.231769 [error] [MainThread]:   Compilation Error in model dim_date (models/gold/dim_date.sql)
+  'congif' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m14:05:32.232699 [info ] [MainThread]: 
+[0m14:05:32.233731 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:05:32.235388 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.8060063, "process_in_blocks": "6432", "process_kernel_time": 0.431601, "process_mem_max_rss": "134912", "process_out_blocks": "472", "process_user_time": 2.263873}
+[0m14:05:32.236826 [debug] [MainThread]: Command `dbt run` failed at 14:05:32.236670 after 1.81 seconds
+[0m14:05:32.237907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb5526590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb9b8e990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x726eb9b087d0>]}
+[0m14:05:32.238702 [debug] [MainThread]: Flushing usage events
+[0m14:05:33.639867 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:08:43.214462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab48ed1990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab4651b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab4657b4d0>]}
+
+
+============================== 14:08:43.218686 | 1785fb34-5bba-4fc6-9987-1e1f7d1dbd34 ==============================
+[0m14:08:43.218686 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:08:43.219823 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'debug': 'False', 'profiles_dir': '/opt/airflow/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --profiles-dir /opt/airflow/dbt', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:08:43.322329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab4657a350>]}
+[0m14:08:43.354471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab48ef0390>]}
+[0m14:08:43.355816 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:08:43.426947 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:08:43.599966 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:08:43.601122 [debug] [MainThread]: Partial parsing: updated file: weather_dbt://models/gold/dim_date.sql
+[0m14:08:43.750424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab44f970d0>]}
+[0m14:08:43.857672 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:08:43.862609 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:08:43.883164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab44bf53d0>]}
+[0m14:08:43.884250 [info ] [MainThread]: Found 4 models, 2 data tests, 1 source, 435 macros
+[0m14:08:43.884997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab44fa9ad0>]}
+[0m14:08:43.886546 [info ] [MainThread]: 
+[0m14:08:43.887362 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:08:43.888042 [info ] [MainThread]: 
+[0m14:08:43.888913 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:08:43.892559 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics'
+[0m14:08:43.920301 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:08:43.921144 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:08:43.921842 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:43.929431 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.008 seconds
+[0m14:08:43.931250 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:08:43.933568 [debug] [ThreadPool]: Using postgres connection "list_analytics"
+[0m14:08:43.934307 [debug] [ThreadPool]: On list_analytics: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:08:43.934892 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:08:43.941181 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.006 seconds
+[0m14:08:43.942436 [debug] [ThreadPool]: On list_analytics: Close
+[0m14:08:43.944487 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics, now list_analytics_silver)
+[0m14:08:43.948505 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:08:43.949217 [debug] [ThreadPool]: On list_analytics_silver: BEGIN
+[0m14:08:43.949730 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:08:43.954954 [debug] [ThreadPool]: SQL status: BEGIN in 0.005 seconds
+[0m14:08:43.956005 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:08:43.956793 [debug] [ThreadPool]: On list_analytics_silver: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_silver"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m14:08:43.959337 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.002 seconds
+[0m14:08:43.960926 [debug] [ThreadPool]: On list_analytics_silver: ROLLBACK
+[0m14:08:43.961920 [debug] [ThreadPool]: On list_analytics_silver: Close
+[0m14:08:43.962999 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_silver, now list_analytics_gold)
+[0m14:08:43.965208 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:08:43.966021 [debug] [ThreadPool]: On list_analytics_gold: BEGIN
+[0m14:08:43.966679 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:08:43.972690 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:43.973468 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:08:43.974022 [debug] [ThreadPool]: On list_analytics_gold: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_gold"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m14:08:43.976556 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.002 seconds
+[0m14:08:43.978058 [debug] [ThreadPool]: On list_analytics_gold: ROLLBACK
+[0m14:08:43.978921 [debug] [ThreadPool]: On list_analytics_gold: Close
+[0m14:08:43.982964 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:43.983748 [debug] [MainThread]: On master: BEGIN
+[0m14:08:43.984442 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:08:43.990499 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:43.991435 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:43.992234 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:08:43.995581 [debug] [MainThread]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:08:43.996655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab44f3db50>]}
+[0m14:08:43.997291 [debug] [MainThread]: On master: ROLLBACK
+[0m14:08:43.997983 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:43.998562 [debug] [MainThread]: On master: BEGIN
+[0m14:08:43.999599 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:08:44.000323 [debug] [MainThread]: On master: COMMIT
+[0m14:08:44.000908 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:44.001424 [debug] [MainThread]: On master: COMMIT
+[0m14:08:44.002181 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:08:44.002897 [debug] [MainThread]: On master: Close
+[0m14:08:44.006900 [debug] [Thread-1 (]: Began running node model.weather_dbt.stg_weather
+[0m14:08:44.007995 [info ] [Thread-1 (]: 1 of 4 START sql view model silver.stg_weather ................................. [RUN]
+[0m14:08:44.008794 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_gold, now model.weather_dbt.stg_weather)
+[0m14:08:44.009654 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.stg_weather
+[0m14:08:44.013994 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.stg_weather"
+[0m14:08:44.020972 [debug] [Thread-1 (]: Began executing node model.weather_dbt.stg_weather
+[0m14:08:44.038463 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.stg_weather"
+[0m14:08:44.046043 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:08:44.046853 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: BEGIN
+[0m14:08:44.047871 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:08:44.054211 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:44.055425 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:08:44.056196 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+
+  create view "analytics"."silver"."stg_weather__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH ranked AS (
+    SELECT
+        day:: DATE AS day,
+        latitude:: NUMERIC AS latitude,
+        longitude:: NUMERIC AS longitude,
+        temp_max:: NUMERIC AS temp_max,
+        temp_min:: NUMERIC AS temp_min,
+        precipitation_sum:: NUMERIC AS precipitation_sum,
+        ingested_at:: TIMESTAMP AS ingested_at,
+        ROW_NUMBER() OVER(PARTITION BY day ORDER BY ingested_at DESC) AS rn
+    FROM "analytics"."bronze"."weather_raw"
+)
+
+SELECT
+    day,
+    latitude,
+    longitude,
+    temp_max,
+    temp_min,
+    precipitation_sum,
+    ingested_at
+FROM ranked
+WHERE rn = 1
+  );
+[0m14:08:44.058730 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m14:08:44.062995 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:08:44.063761 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+alter table "analytics"."silver"."stg_weather" rename to "stg_weather__dbt_backup"
+[0m14:08:44.064945 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.067544 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:08:44.068446 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+alter table "analytics"."silver"."stg_weather__dbt_tmp" rename to "stg_weather"
+[0m14:08:44.069506 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.077357 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: COMMIT
+[0m14:08:44.078157 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:08:44.078849 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: COMMIT
+[0m14:08:44.080914 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:08:44.085908 [debug] [Thread-1 (]: Applying DROP to: "analytics"."silver"."stg_weather__dbt_backup"
+[0m14:08:44.089361 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.stg_weather"
+[0m14:08:44.090097 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.stg_weather"} */
+drop view if exists "analytics"."silver"."stg_weather__dbt_backup" cascade
+[0m14:08:44.094417 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m14:08:44.096353 [debug] [Thread-1 (]: On model.weather_dbt.stg_weather: Close
+[0m14:08:44.097727 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab465639d0>]}
+[0m14:08:44.098763 [info ] [Thread-1 (]: 1 of 4 OK created sql view model silver.stg_weather ............................ [[32mCREATE VIEW[0m in 0.09s]
+[0m14:08:44.099803 [debug] [Thread-1 (]: Finished running node model.weather_dbt.stg_weather
+[0m14:08:44.101097 [debug] [Thread-1 (]: Began running node model.weather_dbt.dim_date
+[0m14:08:44.101943 [info ] [Thread-1 (]: 2 of 4 START sql table model gold.dim_date ..................................... [RUN]
+[0m14:08:44.102907 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.stg_weather, now model.weather_dbt.dim_date)
+[0m14:08:44.103635 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.dim_date
+[0m14:08:44.106539 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.dim_date"
+[0m14:08:44.113977 [debug] [Thread-1 (]: Began executing node model.weather_dbt.dim_date
+[0m14:08:44.126293 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.dim_date"
+[0m14:08:44.134346 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_date"
+[0m14:08:44.135194 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: BEGIN
+[0m14:08:44.135903 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:08:44.141505 [debug] [Thread-1 (]: SQL status: BEGIN in 0.005 seconds
+[0m14:08:44.142742 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_date"
+[0m14:08:44.143651 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_date"} */
+
+  
+    
+
+  create  table "analytics"."gold"."dim_date__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with bounds as (
+    SELECT
+        min(day) as min_day,
+        max(day) as max_day
+    FROM "analytics"."silver"."stg_weather"    
+),
+dates as (
+    select generate_series(min_day, max_day, interval '1 day')::date as date_day
+    from bounds
+)
+SELECT
+    date_day,
+    extract(year from date_day)::int as year,
+    extract(month from date_day)::int as month,
+    to_char(date_day, 'Mon')  as month_name,
+    extract(day from date_day) as day_of_month,
+    extract(dow from date_day)::int as day_of_week,
+    to_char(date_day, 'Dy') as day_name,
+    case when extract(dow from date_day) in (0,6) then true else false end as is_weekend
+FROM dates
+  );
+  
+[0m14:08:44.156406 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.012 seconds
+[0m14:08:44.161024 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_date"
+[0m14:08:44.161769 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_date"} */
+alter table "analytics"."gold"."dim_date__dbt_tmp" rename to "dim_date"
+[0m14:08:44.162816 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.164208 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: COMMIT
+[0m14:08:44.165111 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_date"
+[0m14:08:44.165911 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: COMMIT
+[0m14:08:44.167906 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:08:44.170165 [debug] [Thread-1 (]: Applying DROP to: "analytics"."gold"."dim_date__dbt_backup"
+[0m14:08:44.172481 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_date"
+[0m14:08:44.173067 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_date"} */
+drop table if exists "analytics"."gold"."dim_date__dbt_backup" cascade
+[0m14:08:44.174119 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:08:44.175752 [debug] [Thread-1 (]: On model.weather_dbt.dim_date: Close
+[0m14:08:44.177060 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab417a3d90>]}
+[0m14:08:44.178275 [info ] [Thread-1 (]: 2 of 4 OK created sql table model gold.dim_date ................................ [[32mSELECT 14[0m in 0.07s]
+[0m14:08:44.179243 [debug] [Thread-1 (]: Finished running node model.weather_dbt.dim_date
+[0m14:08:44.180087 [debug] [Thread-1 (]: Began running node model.weather_dbt.dim_location
+[0m14:08:44.180740 [info ] [Thread-1 (]: 3 of 4 START sql table model gold.dim_location ................................. [RUN]
+[0m14:08:44.181715 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.dim_date, now model.weather_dbt.dim_location)
+[0m14:08:44.182410 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.dim_location
+[0m14:08:44.184654 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.dim_location"
+[0m14:08:44.190895 [debug] [Thread-1 (]: Began executing node model.weather_dbt.dim_location
+[0m14:08:44.193836 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.dim_location"
+[0m14:08:44.200294 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:08:44.201168 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: BEGIN
+[0m14:08:44.202014 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:08:44.208319 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:44.209368 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:08:44.209991 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+
+  
+    
+
+  create  table "analytics"."gold"."dim_location__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT DISTINCT
+    latitude,
+    longitude
+FROM "analytics"."silver"."stg_weather"
+  );
+  
+[0m14:08:44.215466 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m14:08:44.217837 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:08:44.218638 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+alter table "analytics"."gold"."dim_location" rename to "dim_location__dbt_backup"
+[0m14:08:44.219944 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.222036 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:08:44.222635 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+alter table "analytics"."gold"."dim_location__dbt_tmp" rename to "dim_location"
+[0m14:08:44.223625 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.225006 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: COMMIT
+[0m14:08:44.225611 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:08:44.226362 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: COMMIT
+[0m14:08:44.227996 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:08:44.229892 [debug] [Thread-1 (]: Applying DROP to: "analytics"."gold"."dim_location__dbt_backup"
+[0m14:08:44.230687 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.dim_location"
+[0m14:08:44.231306 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.dim_location"} */
+drop table if exists "analytics"."gold"."dim_location__dbt_backup" cascade
+[0m14:08:44.233751 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m14:08:44.235284 [debug] [Thread-1 (]: On model.weather_dbt.dim_location: Close
+[0m14:08:44.236174 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab41753410>]}
+[0m14:08:44.237279 [info ] [Thread-1 (]: 3 of 4 OK created sql table model gold.dim_location ............................ [[32mSELECT 1[0m in 0.05s]
+[0m14:08:44.238435 [debug] [Thread-1 (]: Finished running node model.weather_dbt.dim_location
+[0m14:08:44.239295 [debug] [Thread-1 (]: Began running node model.weather_dbt.fct_weather_daily
+[0m14:08:44.240161 [info ] [Thread-1 (]: 4 of 4 START sql table model gold.fct_weather_daily ............................ [RUN]
+[0m14:08:44.240938 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.dim_location, now model.weather_dbt.fct_weather_daily)
+[0m14:08:44.241656 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.fct_weather_daily
+[0m14:08:44.245028 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.252366 [debug] [Thread-1 (]: Began executing node model.weather_dbt.fct_weather_daily
+[0m14:08:44.254894 [debug] [Thread-1 (]: Writing runtime sql for node "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.261704 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.262706 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: BEGIN
+[0m14:08:44.263376 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:08:44.269767 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:44.270777 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.271513 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+
+  
+    
+
+  create  table "analytics"."gold"."fct_weather_daily__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    day AS date_day,
+    latitude,
+    longitude,
+    temp_max,
+    temp_min,
+    temp_max - temp_min AS temp_range,
+    precipitation_sum
+FROM "analytics"."silver"."stg_weather"
+  );
+  
+[0m14:08:44.276549 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.004 seconds
+[0m14:08:44.278911 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.279649 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+alter table "analytics"."gold"."fct_weather_daily" rename to "fct_weather_daily__dbt_backup"
+[0m14:08:44.280583 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.282463 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.283030 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+alter table "analytics"."gold"."fct_weather_daily__dbt_tmp" rename to "fct_weather_daily"
+[0m14:08:44.283909 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:08:44.285083 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: COMMIT
+[0m14:08:44.285745 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.286360 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: COMMIT
+[0m14:08:44.288010 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:08:44.289968 [debug] [Thread-1 (]: Applying DROP to: "analytics"."gold"."fct_weather_daily__dbt_backup"
+[0m14:08:44.291181 [debug] [Thread-1 (]: Using postgres connection "model.weather_dbt.fct_weather_daily"
+[0m14:08:44.291897 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "model.weather_dbt.fct_weather_daily"} */
+drop table if exists "analytics"."gold"."fct_weather_daily__dbt_backup" cascade
+[0m14:08:44.294646 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m14:08:44.296360 [debug] [Thread-1 (]: On model.weather_dbt.fct_weather_daily: Close
+[0m14:08:44.297343 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1785fb34-5bba-4fc6-9987-1e1f7d1dbd34', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab40500210>]}
+[0m14:08:44.298266 [info ] [Thread-1 (]: 4 of 4 OK created sql table model gold.fct_weather_daily ....................... [[32mSELECT 14[0m in 0.06s]
+[0m14:08:44.299367 [debug] [Thread-1 (]: Finished running node model.weather_dbt.fct_weather_daily
+[0m14:08:44.301287 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:44.301890 [debug] [MainThread]: On master: BEGIN
+[0m14:08:44.302781 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:08:44.309311 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m14:08:44.310239 [debug] [MainThread]: On master: COMMIT
+[0m14:08:44.310986 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:44.311950 [debug] [MainThread]: On master: COMMIT
+[0m14:08:44.312787 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:08:44.313429 [debug] [MainThread]: On master: Close
+[0m14:08:44.314254 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:08:44.314860 [debug] [MainThread]: Connection 'model.weather_dbt.fct_weather_daily' was properly closed.
+[0m14:08:44.315731 [info ] [MainThread]: 
+[0m14:08:44.316483 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m14:08:44.317379 [debug] [MainThread]: Command end result
+[0m14:08:44.340554 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:08:44.345219 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:08:44.352188 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/weather_dbt/target/run_results.json
+[0m14:08:44.353144 [info ] [MainThread]: 
+[0m14:08:44.354063 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:08:44.354878 [info ] [MainThread]: 
+[0m14:08:44.355705 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:08:44.357086 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.1872936, "process_in_blocks": "0", "process_kernel_time": 0.486875, "process_mem_max_rss": "129960", "process_out_blocks": "0", "process_user_time": 1.777765}
+[0m14:08:44.358189 [debug] [MainThread]: Command `dbt run` succeeded at 14:08:44.358061 after 1.19 seconds
+[0m14:08:44.359049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab4659fd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab4956b8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eab4aada7d0>]}
+[0m14:08:44.359965 [debug] [MainThread]: Flushing usage events
+[0m14:08:45.674448 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:08:49.391084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6070d95bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606e456f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606e456610>]}
+
+
+============================== 14:08:49.397216 | dd9cd9d3-309c-425b-b268-13399ed920f2 ==============================
+[0m14:08:49.397216 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:08:49.398351 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dbt', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt test --profiles-dir /opt/airflow/dbt', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m14:08:49.517346 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd9cd9d3-309c-425b-b268-13399ed920f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606dbb5f90>]}
+[0m14:08:49.560344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd9cd9d3-309c-425b-b268-13399ed920f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6070dcc7d0>]}
+[0m14:08:49.562045 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:08:49.641853 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:08:49.835858 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:08:49.836792 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:08:49.862522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd9cd9d3-309c-425b-b268-13399ed920f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606cf8bd50>]}
+[0m14:08:49.921397 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:08:49.927239 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:08:49.958726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd9cd9d3-309c-425b-b268-13399ed920f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606c7cac50>]}
+[0m14:08:49.960128 [info ] [MainThread]: Found 4 models, 2 data tests, 1 source, 435 macros
+[0m14:08:49.961538 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd9cd9d3-309c-425b-b268-13399ed920f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606cf68b10>]}
+[0m14:08:49.963824 [info ] [MainThread]: 
+[0m14:08:49.965360 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:08:49.966533 [info ] [MainThread]: 
+[0m14:08:49.967602 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:08:49.971834 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics_silver'
+[0m14:08:50.058708 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:08:50.059941 [debug] [ThreadPool]: On list_analytics_silver: BEGIN
+[0m14:08:50.060921 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:50.068813 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m14:08:50.069709 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:08:50.070346 [debug] [ThreadPool]: On list_analytics_silver: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_silver"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m14:08:50.074267 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:08:50.075792 [debug] [ThreadPool]: On list_analytics_silver: ROLLBACK
+[0m14:08:50.076629 [debug] [ThreadPool]: On list_analytics_silver: Close
+[0m14:08:50.077551 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_silver, now list_analytics_gold)
+[0m14:08:50.080019 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:08:50.080739 [debug] [ThreadPool]: On list_analytics_gold: BEGIN
+[0m14:08:50.081384 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:08:50.087691 [debug] [ThreadPool]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:50.088760 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:08:50.089587 [debug] [ThreadPool]: On list_analytics_gold: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_gold"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m14:08:50.092130 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.002 seconds
+[0m14:08:50.093626 [debug] [ThreadPool]: On list_analytics_gold: ROLLBACK
+[0m14:08:50.094617 [debug] [ThreadPool]: On list_analytics_gold: Close
+[0m14:08:50.098812 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:50.099699 [debug] [MainThread]: On master: BEGIN
+[0m14:08:50.100371 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:08:50.106809 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:50.107866 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:50.108562 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:08:50.111908 [debug] [MainThread]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:08:50.113631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd9cd9d3-309c-425b-b268-13399ed920f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606c76de50>]}
+[0m14:08:50.114611 [debug] [MainThread]: On master: ROLLBACK
+[0m14:08:50.115718 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:50.116483 [debug] [MainThread]: On master: BEGIN
+[0m14:08:50.117685 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m14:08:50.118428 [debug] [MainThread]: On master: COMMIT
+[0m14:08:50.119048 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:50.119648 [debug] [MainThread]: On master: COMMIT
+[0m14:08:50.120407 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:08:50.120968 [debug] [MainThread]: On master: Close
+[0m14:08:50.124946 [debug] [Thread-1 (]: Began running node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:50.125888 [info ] [Thread-1 (]: 1 of 2 START test not_null_stg_weather_day ..................................... [RUN]
+[0m14:08:50.126905 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_gold, now test.weather_dbt.not_null_stg_weather_day.ddca75ad79)
+[0m14:08:50.127674 [debug] [Thread-1 (]: Began compiling node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:50.137165 [debug] [Thread-1 (]: Writing injected SQL for node "test.weather_dbt.not_null_stg_weather_day.ddca75ad79"
+[0m14:08:50.151403 [debug] [Thread-1 (]: Began executing node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:50.162168 [debug] [Thread-1 (]: Writing runtime sql for node "test.weather_dbt.not_null_stg_weather_day.ddca75ad79"
+[0m14:08:50.176241 [debug] [Thread-1 (]: Using postgres connection "test.weather_dbt.not_null_stg_weather_day.ddca75ad79"
+[0m14:08:50.177382 [debug] [Thread-1 (]: On test.weather_dbt.not_null_stg_weather_day.ddca75ad79: BEGIN
+[0m14:08:50.178148 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:08:50.189835 [debug] [Thread-1 (]: SQL status: BEGIN in 0.012 seconds
+[0m14:08:50.191090 [debug] [Thread-1 (]: Using postgres connection "test.weather_dbt.not_null_stg_weather_day.ddca75ad79"
+[0m14:08:50.191879 [debug] [Thread-1 (]: On test.weather_dbt.not_null_stg_weather_day.ddca75ad79: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "test.weather_dbt.not_null_stg_weather_day.ddca75ad79"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select day
+from "analytics"."silver"."stg_weather"
+where day is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:08:50.194320 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m14:08:50.197817 [debug] [Thread-1 (]: On test.weather_dbt.not_null_stg_weather_day.ddca75ad79: ROLLBACK
+[0m14:08:50.198933 [debug] [Thread-1 (]: On test.weather_dbt.not_null_stg_weather_day.ddca75ad79: Close
+[0m14:08:50.200029 [info ] [Thread-1 (]: 1 of 2 PASS not_null_stg_weather_day ........................................... [[32mPASS[0m in 0.07s]
+[0m14:08:50.201070 [debug] [Thread-1 (]: Finished running node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:50.201892 [debug] [Thread-1 (]: Began running node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:50.202778 [info ] [Thread-1 (]: 2 of 2 START test unique_stg_weather_day ....................................... [RUN]
+[0m14:08:50.203816 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.weather_dbt.not_null_stg_weather_day.ddca75ad79, now test.weather_dbt.unique_stg_weather_day.af5e0fb747)
+[0m14:08:50.204748 [debug] [Thread-1 (]: Began compiling node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:50.208815 [debug] [Thread-1 (]: Writing injected SQL for node "test.weather_dbt.unique_stg_weather_day.af5e0fb747"
+[0m14:08:50.217364 [debug] [Thread-1 (]: Began executing node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:50.219633 [debug] [Thread-1 (]: Writing runtime sql for node "test.weather_dbt.unique_stg_weather_day.af5e0fb747"
+[0m14:08:50.228538 [debug] [Thread-1 (]: Using postgres connection "test.weather_dbt.unique_stg_weather_day.af5e0fb747"
+[0m14:08:50.229672 [debug] [Thread-1 (]: On test.weather_dbt.unique_stg_weather_day.af5e0fb747: BEGIN
+[0m14:08:50.230581 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:08:50.236841 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:50.238024 [debug] [Thread-1 (]: Using postgres connection "test.weather_dbt.unique_stg_weather_day.af5e0fb747"
+[0m14:08:50.238917 [debug] [Thread-1 (]: On test.weather_dbt.unique_stg_weather_day.af5e0fb747: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "node_id": "test.weather_dbt.unique_stg_weather_day.af5e0fb747"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    day as unique_field,
+    count(*) as n_records
+
+from "analytics"."silver"."stg_weather"
+where day is not null
+group by day
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:08:50.241321 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m14:08:50.242913 [debug] [Thread-1 (]: On test.weather_dbt.unique_stg_weather_day.af5e0fb747: ROLLBACK
+[0m14:08:50.243783 [debug] [Thread-1 (]: On test.weather_dbt.unique_stg_weather_day.af5e0fb747: Close
+[0m14:08:50.245071 [info ] [Thread-1 (]: 2 of 2 PASS unique_stg_weather_day ............................................. [[32mPASS[0m in 0.04s]
+[0m14:08:50.246241 [debug] [Thread-1 (]: Finished running node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:50.248250 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:50.248937 [debug] [MainThread]: On master: BEGIN
+[0m14:08:50.249527 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:08:50.255494 [debug] [MainThread]: SQL status: BEGIN in 0.006 seconds
+[0m14:08:50.256514 [debug] [MainThread]: On master: COMMIT
+[0m14:08:50.257125 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:50.257778 [debug] [MainThread]: On master: COMMIT
+[0m14:08:50.258559 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:08:50.259102 [debug] [MainThread]: On master: Close
+[0m14:08:50.259771 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:08:50.260552 [debug] [MainThread]: Connection 'test.weather_dbt.unique_stg_weather_day.af5e0fb747' was properly closed.
+[0m14:08:50.261324 [info ] [MainThread]: 
+[0m14:08:50.262104 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m14:08:50.263129 [debug] [MainThread]: Command end result
+[0m14:08:50.289310 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:08:50.294677 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:08:50.303422 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/weather_dbt/target/run_results.json
+[0m14:08:50.304477 [info ] [MainThread]: 
+[0m14:08:50.305840 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:08:50.306935 [info ] [MainThread]: 
+[0m14:08:50.308064 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m14:08:50.309759 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.9757644, "process_in_blocks": "1224", "process_kernel_time": 0.424628, "process_mem_max_rss": "128016", "process_out_blocks": "0", "process_user_time": 1.617632}
+[0m14:08:50.310937 [debug] [MainThread]: Command `dbt test` succeeded at 14:08:50.310813 after 0.98 seconds
+[0m14:08:50.311828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606e6a2a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d606dbf3850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6072a3ee50>]}
+[0m14:08:50.312679 [debug] [MainThread]: Flushing usage events
+[0m14:08:52.341822 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:08:55.587806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7975ea9750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7975e99910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7976a63a90>]}
+
+
+============================== 14:08:55.593337 | eab37aea-eb7a-45e3-afb0-fcbd3631393a ==============================
+[0m14:08:55.593337 [info ] [MainThread]: Running with dbt=1.10.7
+[0m14:08:55.594440 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dbt/weather_dbt/logs', 'profiles_dir': '/opt/airflow/dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs generate --profiles-dir /opt/airflow/dbt', 'send_anonymous_usage_stats': 'True'}
+[0m14:08:55.722994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eab37aea-eb7a-45e3-afb0-fcbd3631393a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7975506c90>]}
+[0m14:08:55.760404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eab37aea-eb7a-45e3-afb0-fcbd3631393a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d79787e0550>]}
+[0m14:08:55.761710 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m14:08:55.839315 [debug] [MainThread]: checksum: 44f4b502e2ddc67beed4db71ce39b63f2d3b7fc0b96e49a69b096c8f6cc370bc, vars: {}, profile: , target: , version: 1.10.7
+[0m14:08:56.088930 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:08:56.090114 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:08:56.123225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eab37aea-eb7a-45e3-afb0-fcbd3631393a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d79749b03d0>]}
+[0m14:08:56.170912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eab37aea-eb7a-45e3-afb0-fcbd3631393a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7974532990>]}
+[0m14:08:56.174470 [info ] [MainThread]: Found 4 models, 2 data tests, 1 source, 435 macros
+[0m14:08:56.176572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eab37aea-eb7a-45e3-afb0-fcbd3631393a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7975ed8a10>]}
+[0m14:08:56.179484 [info ] [MainThread]: 
+[0m14:08:56.180883 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:08:56.181801 [info ] [MainThread]: 
+[0m14:08:56.183040 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:08:56.187127 [debug] [ThreadPool]: Acquiring new postgres connection 'list_analytics_silver'
+[0m14:08:56.229366 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:08:56.230367 [debug] [ThreadPool]: On list_analytics_silver: BEGIN
+[0m14:08:56.231044 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:56.239300 [debug] [ThreadPool]: SQL status: BEGIN in 0.008 seconds
+[0m14:08:56.240509 [debug] [ThreadPool]: Using postgres connection "list_analytics_silver"
+[0m14:08:56.245952 [debug] [ThreadPool]: On list_analytics_silver: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_silver"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m14:08:56.251772 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:08:56.253468 [debug] [ThreadPool]: On list_analytics_silver: ROLLBACK
+[0m14:08:56.254735 [debug] [ThreadPool]: On list_analytics_silver: Close
+[0m14:08:56.256640 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_silver, now list_analytics_gold)
+[0m14:08:56.259161 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:08:56.259934 [debug] [ThreadPool]: On list_analytics_gold: BEGIN
+[0m14:08:56.260591 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:08:56.269406 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m14:08:56.270508 [debug] [ThreadPool]: Using postgres connection "list_analytics_gold"
+[0m14:08:56.271193 [debug] [ThreadPool]: On list_analytics_gold: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "list_analytics_gold"} */
+select
+      'analytics' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'analytics' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+  
+[0m14:08:56.274613 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.002 seconds
+[0m14:08:56.278336 [debug] [ThreadPool]: On list_analytics_gold: ROLLBACK
+[0m14:08:56.280982 [debug] [ThreadPool]: On list_analytics_gold: Close
+[0m14:08:56.285727 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:56.286922 [debug] [MainThread]: On master: BEGIN
+[0m14:08:56.287888 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:08:56.294864 [debug] [MainThread]: SQL status: BEGIN in 0.007 seconds
+[0m14:08:56.297023 [debug] [MainThread]: Using postgres connection "master"
+[0m14:08:56.298573 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:08:56.302639 [debug] [MainThread]: SQL status: SELECT 1 in 0.003 seconds
+[0m14:08:56.304184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eab37aea-eb7a-45e3-afb0-fcbd3631393a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7974900bd0>]}
+[0m14:08:56.305622 [debug] [MainThread]: On master: ROLLBACK
+[0m14:08:56.306760 [debug] [MainThread]: On master: Close
+[0m14:08:56.310665 [debug] [Thread-1 (]: Began running node model.weather_dbt.stg_weather
+[0m14:08:56.311654 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_gold, now model.weather_dbt.stg_weather)
+[0m14:08:56.312586 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.stg_weather
+[0m14:08:56.320429 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.stg_weather"
+[0m14:08:56.335795 [debug] [Thread-1 (]: Began executing node model.weather_dbt.stg_weather
+[0m14:08:56.337573 [debug] [Thread-1 (]: Finished running node model.weather_dbt.stg_weather
+[0m14:08:56.339567 [debug] [Thread-1 (]: Began running node model.weather_dbt.dim_date
+[0m14:08:56.341288 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.stg_weather, now model.weather_dbt.dim_date)
+[0m14:08:56.342499 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.dim_date
+[0m14:08:56.348438 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.dim_date"
+[0m14:08:56.360881 [debug] [Thread-1 (]: Began executing node model.weather_dbt.dim_date
+[0m14:08:56.362226 [debug] [Thread-1 (]: Finished running node model.weather_dbt.dim_date
+[0m14:08:56.363494 [debug] [Thread-1 (]: Began running node model.weather_dbt.dim_location
+[0m14:08:56.365580 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.dim_date, now model.weather_dbt.dim_location)
+[0m14:08:56.367921 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.dim_location
+[0m14:08:56.372267 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.dim_location"
+[0m14:08:56.382887 [debug] [Thread-1 (]: Began executing node model.weather_dbt.dim_location
+[0m14:08:56.385956 [debug] [Thread-1 (]: Finished running node model.weather_dbt.dim_location
+[0m14:08:56.388275 [debug] [Thread-1 (]: Began running node model.weather_dbt.fct_weather_daily
+[0m14:08:56.390426 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.dim_location, now model.weather_dbt.fct_weather_daily)
+[0m14:08:56.391611 [debug] [Thread-1 (]: Began compiling node model.weather_dbt.fct_weather_daily
+[0m14:08:56.395642 [debug] [Thread-1 (]: Writing injected SQL for node "model.weather_dbt.fct_weather_daily"
+[0m14:08:56.405597 [debug] [Thread-1 (]: Began executing node model.weather_dbt.fct_weather_daily
+[0m14:08:56.407186 [debug] [Thread-1 (]: Finished running node model.weather_dbt.fct_weather_daily
+[0m14:08:56.408084 [debug] [Thread-1 (]: Began running node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:56.408911 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.weather_dbt.fct_weather_daily, now test.weather_dbt.not_null_stg_weather_day.ddca75ad79)
+[0m14:08:56.409724 [debug] [Thread-1 (]: Began compiling node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:56.419476 [debug] [Thread-1 (]: Writing injected SQL for node "test.weather_dbt.not_null_stg_weather_day.ddca75ad79"
+[0m14:08:56.429858 [debug] [Thread-1 (]: Began executing node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:56.431293 [debug] [Thread-1 (]: Finished running node test.weather_dbt.not_null_stg_weather_day.ddca75ad79
+[0m14:08:56.432200 [debug] [Thread-1 (]: Began running node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:56.433194 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.weather_dbt.not_null_stg_weather_day.ddca75ad79, now test.weather_dbt.unique_stg_weather_day.af5e0fb747)
+[0m14:08:56.434487 [debug] [Thread-1 (]: Began compiling node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:56.439673 [debug] [Thread-1 (]: Writing injected SQL for node "test.weather_dbt.unique_stg_weather_day.af5e0fb747"
+[0m14:08:56.449930 [debug] [Thread-1 (]: Began executing node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:56.451025 [debug] [Thread-1 (]: Finished running node test.weather_dbt.unique_stg_weather_day.af5e0fb747
+[0m14:08:56.452761 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:08:56.453615 [debug] [MainThread]: Connection 'test.weather_dbt.unique_stg_weather_day.af5e0fb747' was properly closed.
+[0m14:08:56.455952 [debug] [MainThread]: Command end result
+[0m14:08:56.605707 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:08:56.611202 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:08:56.621008 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt/weather_dbt/target/run_results.json
+[0m14:08:56.644049 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m14:08:56.645439 [info ] [MainThread]: Building catalog
+[0m14:08:56.653711 [debug] [ThreadPool]: Acquiring new postgres connection 'analytics.information_schema'
+[0m14:08:56.660572 [debug] [ThreadPool]: Using postgres connection "analytics.information_schema"
+[0m14:08:56.661655 [debug] [ThreadPool]: On analytics.information_schema: BEGIN
+[0m14:08:56.662387 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:08:56.671568 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m14:08:56.672918 [debug] [ThreadPool]: Using postgres connection "analytics.information_schema"
+[0m14:08:56.673790 [debug] [ThreadPool]: On analytics.information_schema: /* {"app": "dbt", "dbt_version": "1.10.7", "profile_name": "weather_dbt", "target_name": "dev", "connection_name": "analytics.information_schema"} */
+
+    
+    
+
+    select
+        'analytics' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('gold') and
+           upper(tbl.relname) = upper('dim_location')) or (upper(sch.nspname) = upper('gold') and
+           upper(tbl.relname) = upper('fct_weather_daily')) or (upper(sch.nspname) = upper('gold') and
+           upper(tbl.relname) = upper('dim_date')) or (upper(sch.nspname) = upper('silver') and
+           upper(tbl.relname) = upper('stg_weather')) or (upper(sch.nspname) = upper('bronze') and
+           upper(tbl.relname) = upper('weather_raw')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m14:08:56.691728 [debug] [ThreadPool]: SQL status: SELECT 31 in 0.017 seconds
+[0m14:08:56.694437 [debug] [ThreadPool]: On analytics.information_schema: ROLLBACK
+[0m14:08:56.695883 [debug] [ThreadPool]: On analytics.information_schema: Close
+[0m14:08:56.708728 [debug] [MainThread]: Wrote artifact CatalogArtifact to /opt/airflow/dbt/weather_dbt/target/catalog.json
+[0m14:08:56.745135 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt/weather_dbt/target/manifest.json
+[0m14:08:56.753480 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt/weather_dbt/target/semantic_manifest.json
+[0m14:08:56.755054 [info ] [MainThread]: Catalog written to /opt/airflow/dbt/weather_dbt/target/catalog.json
+[0m14:08:56.756834 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 1.2271943, "process_in_blocks": "3416", "process_kernel_time": 0.43435, "process_mem_max_rss": "126560", "process_out_blocks": "0", "process_user_time": 1.860933}
+[0m14:08:56.758137 [debug] [MainThread]: Command `dbt docs generate` succeeded at 14:08:56.758013 after 1.23 seconds
+[0m14:08:56.759570 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m14:08:56.761193 [debug] [MainThread]: Connection 'analytics.information_schema' was properly closed.
+[0m14:08:56.762177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d7977c2ef50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d797a315590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d797319c950>]}
+[0m14:08:56.763076 [debug] [MainThread]: Flushing usage events
+[0m14:08:58.019997 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,7 +1,7 @@
 from datetime import timedelta, datetime
 from airflow import DAG
-from airflow.operators.python import PythonOperater
-from airflow.operators.bash import BashOperater
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
 
 from tasks.extract_weather import extract_and_load_weather
 
@@ -13,7 +13,7 @@ with DAG(
     tags = ["weather", "dbt", "demo"],
 ) as dag:
     
-    init_warehouse = BashOperater(
+    init_warehouse = BashOperator(
         task_id = "init_warehouse",
         bash_command = """
         psql -h $WAREHOUSE_HOST -p $WAREHOUSE_PORT -U $WAREHOUSE_USER -d $WAREHOUSE_DB  \
@@ -21,13 +21,13 @@ with DAG(
         """,
     )
 
-    extract_load = PythonOperater (
+    extract_load = PythonOperator (
         task_id = "extract_and_load_weather_to_bronze",
         python_callable = extract_and_load_weather,
 
     )
 
-    dbt_run = BashOperater (
+    dbt_run = BashOperator (
         task_id = "dbt_run",
         bash_command = """
         cd $DBT_PROJECT_DIR && \
@@ -35,7 +35,7 @@ with DAG(
         """
     )
 
-    dbt_test = BashOperater (
+    dbt_test = BashOperator (
         task_id = "dbt_test",
         bash_command = """
         cd $DBT_PROJECT_DIR && \
@@ -43,7 +43,7 @@ with DAG(
         """,
     )
 
-    dbt_docs = BashOperater (
+    dbt_docs = BashOperator (
         task_id = "dbt_docs_generate",
         bash_command = """
         cd $DBT_PROJECT_DIR && \

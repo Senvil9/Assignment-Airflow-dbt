@@ -1,10 +1,20 @@
-{{ config(materialized='table') }}
+
+  
+    
+
+  create  table "analytics"."gold"."dim_date__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
 
 with bounds as (
     SELECT
         min(day) as min_day,
         max(day) as max_day
-    FROM {{ ref('stg_weather') }}    
+    FROM "analytics"."silver"."stg_weather"    
 ),
 dates as (
     select generate_series(min_day, max_day, interval '1 day')::date as date_day
@@ -20,3 +30,5 @@ SELECT
     to_char(date_day, 'Dy') as day_name,
     case when extract(dow from date_day) in (0,6) then true else false end as is_weekend
 FROM dates
+  );
+  

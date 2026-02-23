@@ -32,7 +32,7 @@ def extract_and_load_weather():
         password = os.getenv("WAREHOUSE_PASSWORD")
     )
 
-    conn.auto_commit = True
+    conn.autocommit = True
     ingested_at = datetime.now()
 
     with conn.cursor() as cur:

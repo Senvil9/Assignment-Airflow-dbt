@@ -1,10 +1,10 @@
-{{ config(materialized='table') }}
+
 
 with bounds as (
     SELECT
         min(day) as min_day,
         max(day) as max_day
-    FROM {{ ref('stg_weather') }}    
+    FROM "analytics"."silver"."stg_weather"    
 ),
 dates as (
     select generate_series(min_day, max_day, interval '1 day')::date as date_day
