@@ -1,4 +1,17 @@
 {
     "python-envs.pythonProjects": [],
-    "python-envs.defaultEnvManager": "ms-python.python:system"
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "sqltools.connections": [
+        {
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5454,
+            "driver": "PostgreSQL",
+            "name": "airflowdb",
+            "database": "analytics",
+            "username": "dbuser",
+            "password": "depass"
+        }
+    ]
 }
