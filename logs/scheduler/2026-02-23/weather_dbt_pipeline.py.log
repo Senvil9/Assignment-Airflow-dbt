@@ -1,0 +1,42 @@
+[2026-02-23T13:36:11.043+0000] {processor.py:186} INFO - Started process (PID=175) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:36:11.045+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T13:36:11.047+0000] {logging_mixin.py:190} INFO - [2026-02-23T13:36:11.046+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:36:11.074+0000] {logging_mixin.py:190} INFO - [2026-02-23T13:36:11.069+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/weather_dbt_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_dbt_pipeline.py", line 3, in <module>
+    from airflow.operators.python import PythonOperater
+ImportError: cannot import name 'PythonOperater' from 'airflow.operators.python' (/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py)
+[2026-02-23T13:36:11.076+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:36:11.099+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.061 seconds
+[2026-02-23T13:36:42.001+0000] {processor.py:186} INFO - Started process (PID=180) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:36:42.002+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T13:36:42.008+0000] {logging_mixin.py:190} INFO - [2026-02-23T13:36:42.008+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:36:42.024+0000] {logging_mixin.py:190} INFO - [2026-02-23T13:36:42.020+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/weather_dbt_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_dbt_pipeline.py", line 3, in <module>
+    from airflow.operators.python import PythonOperater
+ImportError: cannot import name 'PythonOperater' from 'airflow.operators.python' (/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py)
+[2026-02-23T13:36:42.025+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:36:42.066+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.073 seconds
+[2026-02-23T13:37:12.833+0000] {processor.py:186} INFO - Started process (PID=185) to work on /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:37:12.834+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/weather_dbt_pipeline.py for tasks to queue
+[2026-02-23T13:37:12.837+0000] {logging_mixin.py:190} INFO - [2026-02-23T13:37:12.836+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:37:12.850+0000] {logging_mixin.py:190} INFO - [2026-02-23T13:37:12.846+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/weather_dbt_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/weather_dbt_pipeline.py", line 3, in <module>
+    from airflow.operators.python import PythonOperater
+ImportError: cannot import name 'PythonOperater' from 'airflow.operators.python' (/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py)
+[2026-02-23T13:37:12.851+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/weather_dbt_pipeline.py
+[2026-02-23T13:37:12.871+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/weather_dbt_pipeline.py took 0.059 seconds
